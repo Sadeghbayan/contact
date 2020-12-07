@@ -1,0 +1,88 @@
+@import "./import";
+
+.ant-list-bordered {
+  .ant-spin-container {
+    .ant-list-item {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.ant-card{
+  width: 100%;
+}
+
+.ant-tabs-bar{
+  margin-bottom: 0 !important;
+}
+
+.ant-tabs-content{
+  border: 1px solid $main-color-dark;
+  background: $main-color;
+  padding: 5px 7px;
+  overflow-y: auto;
+  @include mq(lg){
+    padding: 5px 7px;
+    padding-bottom: 10px;
+    min-height: 250px;
+  }
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
+  background: $main-color;
+  border-color: $main-color-darker;
+  padding-top: .5px;
+  min-width: 40px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+
+.ant-tabs-top > .ant-tabs-nav {
+  margin-bottom: 0;
+}
+
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+  height: 40px;
+  color: $dark;
+  box-shadow: 0px -4px 5px 0px $silver inset;
+}
+
+
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list {
+  display: flex;
+  justify-content: space-between;
+  //width: 100%;
+}
+
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+  padding: 8px 10px;
+  background: $main-color;
+  border-color: $main-color-darker;
+  &.ant-tabs-tab-active {
+    border-bottom: medium none;
+  }
+}
+
+.ant-tabs-tab-btn {
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      &:first-child {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      &:last-child {
+        font-size: 10px;
+        margin-left: 4px;
+        margin-top: 9px;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// Min width media queries
+$fix-mqs : false !default;
+
+// Media query helpers
+// -----------------------------------------------------------------------------
+// Media query min-width based
+@mixin mq($name) {
+  @if $fix-mqs {
+    @if $fix-mqs>=map-get($grid-breakpoints, $name) {
+      @content;
+    }
+  }
+
+  @else {
+    @if not map-has-key($grid-breakpoints, $name) {
+      @warn "Warning: `#{$name}` is not a valid breakpoint name, get your shit together!";
+    }
+
+    @else {
+      @media (min-width: map-get($grid-breakpoints, $name)) {
+        @content;
+      }
+    }
+  }
+}
+
+
+
+@mixin redGradiant() {
+  background: rgba(248,80,50,1);
+  background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(248,80,50,1) 32%, rgba(247,75,52,1) 40%, rgba(240,75,53,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(32%, rgba(248,80,50,1)), color-stop(40%, rgba(247,75,52,1)), color-stop(51%, rgba(240,75,53,1)), color-stop(71%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+  background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(248,80,50,1) 32%, rgba(247,75,52,1) 40%, rgba(240,75,53,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(248,80,50,1) 32%, rgba(247,75,52,1) 40%, rgba(240,75,53,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(248,80,50,1) 32%, rgba(247,75,52,1) 40%, rgba(240,75,53,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(248,80,50,1) 32%, rgba(247,75,52,1) 40%, rgba(240,75,53,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+}

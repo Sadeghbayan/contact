@@ -1,0 +1,15 @@
+@import "import";
+
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+  @include mq(md){
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mt40 {
+  margin-top: 40px;
+}
