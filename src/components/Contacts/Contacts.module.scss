@@ -1,0 +1,36 @@
+@import '../../styles/import';
+
+.contacts {
+  font-family: "Heiti TC";
+
+  .title{
+    text-align: center;
+  }
+}
+
+.listWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+  margin-top: 10px;
+  flex-direction: column;
+  @include mq(lg){
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  li{
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px solid $mid-gray;
+    position: relative;
+    padding: 13px 3px;
+    @include mq(lg){
+      flex-basis: 48%;
+    }
+  }
+}
