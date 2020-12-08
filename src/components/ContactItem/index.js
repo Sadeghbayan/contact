@@ -33,32 +33,32 @@ const ContactItem = props => {
 					{makeStringtoUpperCase(userInfo.name.first)}, {userInfo.name.last}
 				</div>
 
-				<div className={styles.userInfo}>
+				<div>
 					<label>e-mail</label>
 					<span>{userInfo.email}</span>
 				</div>
 
-				<div className={styles.userInfo}>
+				<div>
 					<label>phone</label>
 					<span>{userInfo.phone}</span>
 				</div>
 
-				<div className={styles.userInfo}>
+				<div>
 					<label>street</label>
 					<span>{userInfo.location.street.number} {userInfo.location.street.name}</span>
 				</div>
 
-				<div className={styles.userInfo}>
+				<div>
 					<label>city</label>
 					<span>{userInfo.location.city}</span>
 				</div>
 
-				<div className={styles.userInfo}>
+				<div>
 					<label>state</label>
 					<span>{userInfo.location.state}</span>
 				</div>
 
-				<div className={styles.userInfo}>
+				<div>
 					<label>postcode</label>
 					<span>{userInfo.location.postcode}</span>
 				</div>
